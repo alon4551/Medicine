@@ -1,0 +1,21 @@
+.search{
+    
+    display: flexbox;
+    margin: 8vw 0;
+    justify-content: center;
+    .title{
+        font-size: 7vw;
+        text-align: center;
+    }
+    .preview{
+        margin:auto;
+        width: 75vw;
+    }
+    .inputs{
+        display: flex;
+        justify-content: space-evenly;
+        width: 75%;
+       
+        margin:auto;
+    }
+}

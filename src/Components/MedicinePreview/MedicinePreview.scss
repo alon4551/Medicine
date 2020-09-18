@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start ;
+    padding: 10px;
+    align-content: center;
+    margin :1em;
+    border: #000000 3px solid;
+    border-radius: 3vw;
+    &.right{
+        flex-direction: row-reverse;
+    }
+    .iconing{
+        height: 5vw;
+        width: auto;
+     
+    }
+    
+    .name{
+        
+        align-self: center;
+        padding-left: 1vw;
+    }
+}

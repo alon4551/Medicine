@@ -1,0 +1,23 @@
+.input-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  &.right{
+    flex-direction: row-reverse;
+  }
+  .name{
+    padding: 0px 20px;
+    
+  }
+.input{
+ height: 2vw;
+ justify-self: center;
+ align-self: center;
+    width: 100%;
+    border: 1px solid black ;
+    
+    background: rgba(255,255,255,0.5);
+  
+}
+}

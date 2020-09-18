@@ -1,0 +1,19 @@
+.main{
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin:10vw auto;
+    padding: 0 20vw;
+    .title{
+        
+        font-size:7vw;
+    }
+    .link{
+        font-size: 2vw;
+        padding:10px;
+        color:white;
+        text-decoration: none;
+        border:1px solid whitesmoke ;
+        border-radius:10px ;
+    }
+}

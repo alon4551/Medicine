@@ -12,6 +12,12 @@ export const medicineReducer = (state=INITAIL_STATE,action) =>{
         case Types.FILTER:
             return {...state, filter:Filter_by_Name(state)
             }
+        case Types.REMOVE:{
+                return {
+                    ...state,
+                   medicines:state.medicines.filter(med=>med.id!==action.payload)
+                }
+            }
         case Types.GENERIC:
             return {
             ...state,
@@ -43,6 +49,71 @@ export const medicineReducer = (state=INITAIL_STATE,action) =>{
             ...state,
             medicines:action.payload,
             filter:action.payload
+        }
+        case Types.ADD_VALUE:{
+            const {id,value}=action.payload;
+            const {effects,contraindications,treatment}=state.Med;
+            switch(id){
+                case 'effects':{
+                    effects.push(value);
+                    break;
+                }
+                case 'contraindications':{
+                    contraindications.push(value);
+                    break;
+                }
+                case 'treatment':{
+                    treatment.push(value);
+                    break;
+                }
+            }
+            return {
+                ...state,
+                Med:{
+                    ...state.Med,
+                    effects,
+                    contraindications,
+                    treatment
+                }
+            }
+        }
+        case Types.REMOVE_VALUE:{
+            const {id,value}=action.payload;
+            console.log(value);
+            let {effects,contraindications,treatment}=state.Med;
+            switch(id){
+                case 'effects':{
+                    effects = effects.filter(item=>item!==value);
+                    break;
+                }
+                case 'contraindications':{
+                    contraindications=contraindications.filter(item=>item!==value);
+                    break;
+                }
+                case 'treatment':{
+                    contraindications=contraindications.filter(item=>item!==value);
+                    break;
+                }
+            }
+            return {
+                ...state,
+                Med:{
+                    ...state.Med,
+                    effects,
+                    contraindications,
+                    treatment
+                }
+            }
+        }
+        case Types.CHANGE:{
+            const {id,value}=action.payload;
+            return {
+                ...state,
+                Med:{
+                    ...state.Med,
+                    [id]:value
+                }
+            }
         }
         default:
             return state;

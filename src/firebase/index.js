@@ -33,12 +33,15 @@ const config ={
       const snapShot =await MedicinesRef.get();
       const array=[];
        await snapShot.forEach( item => {
-          array.push(item.data());
+          array.push({id:item.id,
+              ...item.data()});
       });
-      console.log(array);
       return array;
   }
-
+  export const DeleteMedicine=async(id)=>{
+    const MedicineRef=firestore.collection("Medicine").doc(id);
+    await MedicineRef.delete();
+  }
   export const signInWithGoogle =()=>auth.signInWithGoogle(provider);
   
 

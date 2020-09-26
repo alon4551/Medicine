@@ -25,3 +25,19 @@ export const changeCommecial=(value)=>({
     type:Types.COMMERCIAL,
     payload:value
 })
+export const removeValue=(id,value)=>({
+    type:Types.REMOVE_VALUE,
+    payload:{id,value}
+})
+export const addValue=(id,value)=>({
+    type:Types.ADD_VALUE,
+    payload:{id,value}
+})
+export const changeValue=(id,value)=>({
+type:Types.CHANGE,
+payload:{id,value}
+})
+export const removeItem=(id)=>({
+    type:Types.REMOVE,
+    payload:id
+})

@@ -5,5 +5,9 @@ export default {
     COMMERCIAL:'COMMERCIAL',
     CLEAR:'CLEAR',
     REFRESH:'REFRESH',
-    ADD:'ADD'
+    ADD:'ADD',
+    REMOVE:'REMOVE',
+    CHANGE:'CHANGE',
+    ADD_VALUE:'ADD_VALUE',
+    REMOVE_VALUE:'REMOVE_VALUE'
 }

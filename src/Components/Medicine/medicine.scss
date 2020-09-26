@@ -1,44 +1,44 @@
-.medicine{
+.medicine {
     display: flex;
-    
     text-align: center;
     flex-direction: column;
-    margin:0 15vw;
-    .names{
+    margin: 0 15vw;
+    .names {
         display: flex;
         margin-top: 2vw;
         justify-content: space-evenly;
         flex-direction: row;
-        .name{
+        .name {
             font-size: 5vw;
             color: black;
             text-decoration: underline;
         }
     }
-    .behavior{
+    .behavior {
         margin: 4vw;
         padding: 4vw;
         background: #cfcfcf;
         border: black 1px solid;
     }
-    .categories{
+    .delete {
+        margin: 4vw 20vw;
+        height: 2vw;
+        background-color: #dd3737;
+        box-shadow: 0 0 5vw 1vw #9e1010;
+    }
+    .categories {
         display: flex;
         box-sizing: border-box;
         flex-direction: row;
         justify-content: center;
         background-color: #1a8ca0;
         padding: 1vw;
-        
-        label{
-            border:1px #354585 solid;
+        label {
+            border: 1px #354585 solid;
             border-radius: 2vw;
-            
             cursor: pointer;
             padding: 1.5vw;
             margin: auto;
-
         }
-        
     }
-  
 }

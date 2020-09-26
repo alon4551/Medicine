@@ -6,7 +6,8 @@ export default {
         behavior: '',
         effects: [],
         contraindications: [],
-        treatment: []
+        treatment: [],
+        addValue:''
     },
     filter: [],
     generic: '',

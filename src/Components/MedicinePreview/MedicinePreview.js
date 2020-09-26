@@ -4,7 +4,9 @@ import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {ClearFilter} from '../../Redux/Medicine/medicine.actions';
 import { ReactComponent as Icon} from '../../assets/icon.svg';
-const Preview =({genericName,commercialName,right,id,history,match,clear} )=>{
+const Preview =(med )=>{
+    const {genericName,commercialName,right,id,history,match,clear}=med;
+
     return (
     <div className={`container ${right?'right':''}`}
         onClick={()=>{

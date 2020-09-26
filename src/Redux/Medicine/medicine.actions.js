@@ -6,6 +6,14 @@ export const getMedicines=()=>({
 export const Filter=()=>({
     type:Types.FILTER
 })
+export const AddItem=(data)=>({
+    type:Types.ADD,
+    payload:data
+})
+export const Refresh=(data)=>({
+    type:Types.REFRESH,
+    payload:data
+})
 export const ClearFilter=()=>({
     type:Types.CLEAR
 })

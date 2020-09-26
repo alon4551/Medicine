@@ -1,3 +1,4 @@
+import medicine from '../../Components/Medicine/medicine';
 import INITAIL_STATE from '../../Data';
 import Types from './medicine.types';
 import {Filter_by_Name} from './medicine.utils';
@@ -17,6 +18,15 @@ export const medicineReducer = (state=INITAIL_STATE,action) =>{
             generic:action.payload.trim()
            
         }
+        case Types.ADD:
+            {
+                const {medicines}=state;
+                medicines.push(action.payload);
+                return{
+                    ...state,
+                    medicines
+                }
+            }
         case Types.COMMERCIAL:
             return {
             ...state,
@@ -27,6 +37,12 @@ export const medicineReducer = (state=INITAIL_STATE,action) =>{
             ...state,
             commercial:'',
             generic:''
+        }
+        case Types.REFRESH:
+            return{
+            ...state,
+            medicines:action.payload,
+            filter:action.payload
         }
         default:
             return state;

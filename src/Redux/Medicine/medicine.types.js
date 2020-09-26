@@ -3,5 +3,7 @@ export default {
     FILTER:'FILTER',
     GENERIC:'GENERIC',
     COMMERCIAL:'COMMERCIAL',
-    CLEAR:'CLEAR'
+    CLEAR:'CLEAR',
+    REFRESH:'REFRESH',
+    ADD:'ADD'
 }

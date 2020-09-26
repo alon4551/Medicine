@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
 import {Route, Switch,Link} from 'react-router-dom';
+import {GetMedicines} from './firebase';
+import {connect} from 'react-redux';
+import {Refresh,Filter} from './Redux/Medicine/medicine.actions';
 import Search from './Pages/Search';
 import Medicine from './Components/Medicine';
+import Add from './Pages/AddMedicine';
 import Main from './Pages/Main';
 import './App.css';
 class App extends Component {
-  render(){
-   
+    constructor(){
+      super();
+    }
+    componentDidMount(){
+      GetMedicines().then(data=>{
+        this.props.Refresh(data)
+      });
+    }
+    render(){
+   const url='https://pics.clipartpng.com/Red_and_White_Pill_Capsule_PNG_Clipart-360.png';
     return (
       <div className="circles">
 
@@ -23,23 +35,27 @@ class App extends Component {
           <Route exact path='/' component={Main}/>
         <Route exact path='/medicines' component={Search}/>
         <Route path ='/medicines/:medId' component={Medicine}/>
+        <Route path ='/add' component={Add}/>
         </Switch>
       </div>
         
         <ul className="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    <li><img src={url}/></li>
+                    
             </ul>
       </div>
   );
   }
 }
-export default App;
+const mapDispatchToProps=dispatch=>({
+  Refresh:(data)=>dispatch(Refresh(data))
+})
+export default connect(null,mapDispatchToProps)(App);

@@ -8,12 +8,19 @@
         
         font-size:7vw;
     }
+    .links{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
     .link{
         font-size: 2vw;
+        margin-top: 1fr;
+        box-sizing: border-box;
         padding:10px;
         color:white;
         text-decoration: none;
         border:1px solid whitesmoke ;
         border-radius:10px ;
     }
+}
 }

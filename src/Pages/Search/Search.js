@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {changeGeneric,changeCommecial,Filter} from '../../Redux/Medicine/medicine.actions';
+import {changeGeneric,changeCommecial,Filter,Refresh} from '../../Redux/Medicine/medicine.actions';
 import './Search.scss';
 import Input from '../../Components/Input';
 import Preview from '../../Components/MedicinePreview';
@@ -11,8 +11,8 @@ class Search extends Component{
             generic:'',
             commercial:''
         }
-        this.props.filter();
     }
+
     onChange=({target:{value,id}})=>{
         const {generic,commercial,filter}=this.props;
         if(id==='generic')
@@ -24,6 +24,7 @@ class Search extends Component{
     render(){
         const {FilterMed}=this.props;
         const {onChange}=this;
+
         return(<div className="search">
               <div className="title">
             Medicines
@@ -35,7 +36,7 @@ class Search extends Component{
             </div>
             <br/>
             <div className="preview">
-                {FilterMed.map(item=><Preview key={item.id} {...item}/>)}
+                {FilterMed.map((item,index)=><Preview key={index} id={index} {...item}/>)}
             </div>
         </div>)
 
@@ -47,6 +48,7 @@ FilterMed:filter
 })
 const mapDispatchToProps=dispatch=>({
     filter:()=>dispatch(Filter()),
+    Refresh:(data)=> dispatch(Refresh(data)),
     generic:(value)=>dispatch(changeGeneric(value)),
     commercial:(value)=>dispatch(changeCommecial(value))
 })

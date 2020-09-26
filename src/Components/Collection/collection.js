@@ -4,7 +4,7 @@ import './collection.scss';
 const Collection=({list})=>{
 
     return(<div className="display">
-        {list.map((item)=><Item key={item.id} name={item.name}/>)}
+        {list.map((item,index)=><Item key={index} name={item}/>)}
     </div>);
 }
 export default Collection;

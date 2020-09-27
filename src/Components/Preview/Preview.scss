@@ -1,0 +1,32 @@
+.display {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    .con {
+        .sec {
+            box-sizing: border-box;
+            display: flex;
+            margin: 2vw;
+            justify-content: space-between;
+        }
+    }
+}
+
+.section {
+    margin: 8px auto;
+    width: 100%;
+    border: white 1px solid;
+    .collection {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50px, 1fr));
+        .item_name {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 4px;
+            button {
+                padding: 0 3vw;
+            }
+        }
+    }
+}

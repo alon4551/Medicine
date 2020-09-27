@@ -1,44 +1,54 @@
 .medicine {
     display: flex;
-    text-align: center;
     flex-direction: column;
-    margin: 0 15vw;
+    margin: 0 auto;
+    text-align: center;
     .names {
         display: flex;
+        text-align: center;
         margin-top: 2vw;
-        justify-content: space-evenly;
+        justify-content: space-around;
         flex-direction: row;
         .name {
-            font-size: 5vw;
+            font-size: 10vw;
+            font-weight: bold;
             color: black;
             text-decoration: underline;
         }
     }
     .behavior {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
         margin: 4vw;
         padding: 4vw;
-        background: #cfcfcf;
-        border: black 1px solid;
-    }
-    .delete {
-        margin: 4vw 20vw;
-        height: 2vw;
-        background-color: #dd3737;
-        box-shadow: 0 0 5vw 1vw #9e1010;
-    }
-    .categories {
-        display: flex;
-        box-sizing: border-box;
-        flex-direction: row;
-        justify-content: center;
-        background-color: #1a8ca0;
-        padding: 1vw;
         label {
-            border: 1px #354585 solid;
-            border-radius: 2vw;
-            cursor: pointer;
-            padding: 1.5vw;
-            margin: auto;
+            font-weight: bold;
+            font-size: 5vw;
+        }
+        textarea {
+            resize: vertical;
+            background-color: #c5c5c5;
+        }
+    }
+    .options {
+        display: flex;
+        height: 3vw;
+        justify-content: space-evenly;
+        margin-bottom: 4vw;
+        .delete,
+        .update {
+            width: 20vw;
+            height: 2vw;
+        }
+    }
+    $breakpoint-tablet: 768px;
+    @media (max-width: $breakpoint-tablet) {
+        .options {
+            .delete,
+            .update {
+                height: 8vw;
+            }
         }
     }
 }

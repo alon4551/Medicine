@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {changeGeneric,changeCommecial,Filter,Refresh} from '../../Redux/Medicine/medicine.actions';
 import './Search.scss';
 import Input from '../../Components/Input';
-import Preview from '../../Components/MedicinePreview';
+import Popout from '../../Components/MedicinePopout';
 class Search extends Component{
     constructor(props){
         super(props);
@@ -36,7 +36,7 @@ class Search extends Component{
             </div>
             <br/>
             <div className="preview">
-                {FilterMed.map((item,index)=><Preview key={index} id={index} {...item}/>)}
+                {FilterMed.map((item,index)=><Popout key={index} id={index} {...item}/>)}
             </div>
         </div>)
 

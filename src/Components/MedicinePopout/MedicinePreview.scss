@@ -1,26 +1,29 @@
-.container{
+.container {
     display: flex;
     cursor: pointer;
+    box-sizing: border-box;
+    background-color: #c7c7c7;
     width: 100%;
     flex-direction: row;
-    justify-content: flex-start ;
+    justify-content: flex-start;
     padding: 10px;
     align-content: center;
-    margin :1em;
+    margin: 1em;
     border: #000000 3px solid;
     border-radius: 3vw;
-    &.right{
+    &.right {
         flex-direction: row-reverse;
     }
-    .iconing{
+    .iconing {
         height: 5vw;
         width: auto;
-     
     }
-    
-    .name{
-        
+    .name {
         align-self: center;
         padding-left: 1vw;
+    }
+    $breakpoint-tablet: 768px;
+    @media (max-width: $breakpoint-tablet) {
+        justify-content: center;
     }
 }

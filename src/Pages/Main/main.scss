@@ -1,26 +1,25 @@
-.main{
+.main {
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    margin:10vw auto;
+    margin: 10vw auto;
     padding: 0 20vw;
-    .title{
-        
-        font-size:7vw;
+    .title {
+        font-size: 7vw;
     }
-    .links{
+    .links {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 10px;
-    .link{
-        font-size: 2vw;
-        margin-top: 1fr;
-        box-sizing: border-box;
-        padding:10px;
-        color:white;
-        text-decoration: none;
-        border:1px solid whitesmoke ;
-        border-radius:10px ;
+        .link {
+            font-size: 2vw;
+            margin-top: 1fr;
+            box-sizing: border-box;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+        }
     }
-}
 }

@@ -1,0 +1,15 @@
+.section {
+    margin: 8px;
+    width: 100%;
+    border: white 1px solid;
+    .collection {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50px, 1fr));
+        .item {
+            display: flex;
+            flex-direction: row;
+            margin: 4px;
+            border: white 1px solid;
+        }
+    }
+}

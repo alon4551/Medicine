@@ -1,5 +1,14 @@
 .display {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    label {
+        font-size: 5vw;
+    }
+    .items {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
 }

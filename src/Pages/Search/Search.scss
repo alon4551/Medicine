@@ -1,21 +1,27 @@
-.search{
-    
+.search {
     display: flexbox;
     margin: 8vw 0;
     justify-content: center;
-    .title{
+    .title {
         font-size: 7vw;
         text-align: center;
     }
-    .preview{
-        margin:auto;
+    .preview {
+        margin: auto;
         width: 75vw;
     }
-    .inputs{
+    .inputs {
         display: flex;
         justify-content: space-evenly;
         width: 75%;
-       
-        margin:auto;
+        margin: auto;
+    }
+    $breakpoint-tablet: 768px;
+    @media (max-width: $breakpoint-tablet) {
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
     }
 }

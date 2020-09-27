@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {Route, Switch,Link} from 'react-router-dom';
 import {GetMedicines} from './firebase';
 import {connect} from 'react-redux';
-import {Refresh,Filter} from './Redux/Medicine/medicine.actions';
+import {Refresh} from './Redux/Medicine/medicine.actions';
+import Update from './Pages/update';
 import Search from './Pages/Search';
 import Medicine from './Components/Medicine';
 import Add from './Pages/AddMedicine';
@@ -36,19 +37,20 @@ class App extends Component {
         <Route exact path='/medicines' component={Search}/>
         <Route path ='/medicines/:medId' component={Medicine}/>
         <Route path ='/add' component={Add}/>
+        <Route path ='/update' component={Update}/>
         </Switch>
       </div>
         
         <ul className="circles">
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
-                    <li><img src={url}/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
+                    <li><img src={url} alt="med"/></li>
                     
             </ul>
       </div>

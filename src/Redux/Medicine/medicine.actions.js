@@ -37,6 +37,10 @@ export const changeValue=(id,value)=>({
 type:Types.CHANGE,
 payload:{id,value}
 })
+export const updateMed=(item)=>({
+    type:Types.UPDATE,
+    payload:item
+});
 export const removeItem=(id)=>({
     type:Types.REMOVE,
     payload:id

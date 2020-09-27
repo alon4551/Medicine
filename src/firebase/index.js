@@ -28,6 +28,17 @@ const config ={
         treatment 
       })
   }
+  export const updateMedicine=async({genericName,commercialName,behavior,effects,contraindications,treatment,id})=>{
+
+    const Med =firestore.collection('Medicine').doc(id);
+    await Med.update({genericName,
+      commercialName,
+      behavior,
+      effects,
+      contraindications,
+      treatment
+    });
+  }
   export const GetMedicines=async()=>{
       const MedicinesRef=firestore.collection("Medicine");
       const snapShot =await MedicinesRef.get();

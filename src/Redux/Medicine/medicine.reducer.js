@@ -91,7 +91,7 @@ export const medicineReducer = (state=INITAIL_STATE,action) =>{
                     break;
                 }
                 case 'treatment':{
-                    contraindications=contraindications.filter(item=>item!==value);
+                    treatment=treatment.filter(item=>item!==value);
                     break;
                 }
             }
@@ -102,6 +102,15 @@ export const medicineReducer = (state=INITAIL_STATE,action) =>{
                     effects,
                     contraindications,
                     treatment
+                }
+            }
+        }
+        case Types.UPDATE:{
+            return {
+                ...state,
+                Med:{
+                    ...state.Med,
+                    ...action.payload
                 }
             }
         }
